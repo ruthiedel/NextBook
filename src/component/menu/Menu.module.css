@@ -1,0 +1,45 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bookImage {
+  width: 80px; /* או גודל אחר שתרצה */
+  height: auto;
+  margin-right: 15px;
+}
+
+.bookDetails {
+  flex-grow: 1; /* מאפשר למידע למלא את המקום הפנוי */
+}
+
+.deleteButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #ff1a1a;
+}
