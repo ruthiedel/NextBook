@@ -1,5 +1,5 @@
-"use server";
-import { httpBook as http } from "./http.ts";
+"use client";
+import  http  from "./http";
 
 
  type book = {
@@ -14,7 +14,7 @@ export async function getBooks()
 {
 
   const response = await http.get('/');
-  return response.data; // החזר את הנתונים מתוך התגובה
+  return response.data; 
 }
 
 export async function createBook(card:book)

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export  const httpBook = axios.create({
+ const http = axios.create({
     baseURL: "http://localhost:3000/api/book",
 
     headers: {
@@ -8,3 +8,4 @@ export  const httpBook = axios.create({
     }
 });
 
+export default http
