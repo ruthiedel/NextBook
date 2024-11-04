@@ -18,10 +18,10 @@ interface Book {
 
 let booksData: any[] = [...books]; 
 
-export async function GET() {
+export async function GET(request:Request) {
   return new Response(JSON.stringify(booksData), {
     status: 200,
-    headers: { "Content-Type": "application/json" ,
+    headers: { 
       
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
