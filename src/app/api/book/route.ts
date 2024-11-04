@@ -28,6 +28,7 @@ export async function GET(request:Request) {
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     },
   });
+  // return NextResponse.json(booksData)
 }
 
 
