@@ -13,21 +13,30 @@ import  http  from "./http";
 export async function getBooks()
 {
 
-  const response = await http.get('/');
+  const response = await http.get('/book');
   return response.data; 
 }
+export async function createBook(card: Omit<book, 'id'>) {
 
-export async function createBook(card:book)
-{
-    return http.post('/', card)
+  try {
+    console.log("Sending POST request to /book"); // הדפסה לפני השליחה
+    const response = await  http.post('/book', card);
+
+    console.log("POST request successful:", response); // הדפסה אם הצליח
+    return response;
+} catch (error) {
+    console.error("POST request failed:", error); // הודעת שגיאה
+    throw error;
 }
+}
+
 
 export async function updateBook(id:any, card:book)
 {
-    return http.patch(`/${id}`, card)
+    return http.patch(`/book/${id}`, card)
 }
 
 export async function deleteBook(id:any)
 {
-    return http.delete(`/${id}`)
+    return http.delete(`/book/${id}`)
 }

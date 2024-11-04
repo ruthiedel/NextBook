@@ -5,7 +5,7 @@ import { NextRequest } from "next/server"; // Import NextRequest for type annota
 interface Book {
   id: number;
   title: string;
-  price: number; // Include price
+  price: number; 
   description: string; // Include description
   category: string; // Include category
   img: string; // This can map to the image property
@@ -28,7 +28,12 @@ export async function GET(request:Request) {
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     },
   });
-  // return NextResponse.json(booksData)
 }
 
 
+
+  export async function POST(request: NextRequest) {
+    const newBook = await request.json();  // קריאת הנתונים שנשלחו
+    console.log('New Book:', newBook);  // בדיקה של המידע שנשלח
+    return NextResponse.json(newBook, { status: 201 });
+}

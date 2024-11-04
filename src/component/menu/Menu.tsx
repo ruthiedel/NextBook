@@ -5,6 +5,8 @@
 import React from 'react';
 import styles from './Menu.module.css';
 import { AxiosResponse } from 'axios';
+import useBookStore from '@/store/useBookStore';
+
 
 type Product = {
     id: number;
@@ -21,6 +23,7 @@ type MenuProps = {
 
 function Menu({ title, fetchItems, deleteItem }: MenuProps) {
     const [items, setItems] = React.useState<Product[]>([]);
+    const { books,  removeBook } = useBookStore();
 
     React.useEffect(() => {
         const getItems = async () => {
