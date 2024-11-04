@@ -6,8 +6,8 @@ export default function Home() {
     <div>
 
         <h1>Welcome to Ruthi's Bookstore</h1>
-
-      
+        <h2>kkkk</h2>
+        
     </div>
   );
 }
