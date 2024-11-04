@@ -37,7 +37,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, { params }: any) {
 
     try {
         const { id } = params;
