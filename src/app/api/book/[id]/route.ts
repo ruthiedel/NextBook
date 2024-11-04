@@ -23,7 +23,7 @@ let booksData: any[] = [...books];
 
 
 
-export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, { params }: any) {
     const updatedBook: Partial<Book> = await request.json();
     const { id } = params;
 
