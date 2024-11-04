@@ -10,6 +10,7 @@ interface Book {
   category: string; // Include category
   img: string; // This can map to the image property
   rating: { // Include rating
+    
       rate: number;
       count: number;
   };
